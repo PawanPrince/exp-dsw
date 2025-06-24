@@ -1,0 +1,32 @@
+.todoDiv{
+    border: 1px solid gainsboro;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+.todoDiv h2 {
+    margin-bottom: 10px;
+    user-select: none;
+}
+.todoDiv button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.todoDiv button:first-of-type 
+{
+    background-color: royalblue;
+}
+.todoDiv button:last-of-type 
+{
+    background-color: red;
+}
