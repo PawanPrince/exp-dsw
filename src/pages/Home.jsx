@@ -162,7 +162,7 @@ const navigate = useNavigate();
                     ))}
                   </ul>
 
-                  <button
+                  {/* <button
                     onClick={() => handleAddToCart(product.id)}
                     className="w-full bg-[#c1b4a0] text-black font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#c1b4a0]/25 flex items-center justify-center space-x-2"
                   >
@@ -170,7 +170,7 @@ const navigate = useNavigate();
                     <span>
                       Add to Cart {cart[product.id] && `(${cart[product.id]})`}
                     </span>
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}
