@@ -49,19 +49,23 @@ const Footer = () => {
               </div>
               Quick Links
             </h3>
-            <ul className="space-y-3">
-              {['Home', 'About', 'Contact', 'Sign Up', 'Founder'].map((item, index) => (
-                <li key={index}>
-                  <Link 
-                    to={`/${item.toLowerCase().replace(' ', '')}`} 
-                    className="group flex items-center gap-3 text-gray-300 hover:text-pink-400 transition-all duration-300 text-sm"
-                  >
-                    <div className="w-2 h-2 bg-pink-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <span className="group-hover:translate-x-1 transition-transform duration-300">{item}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+           <ul className="space-y-3">
+  {['Home', 'About', 'Contact', 'Sign Up', 'Founder'].map((item, index) => {
+    const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`;
+    return (
+      <li key={index}>
+        <Link 
+          to={path}
+          className="group flex items-center gap-3 text-gray-300 hover:text-pink-400 transition-all duration-300 text-sm"
+        >
+          <div className="w-2 h-2 bg-pink-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span className="group-hover:translate-x-1 transition-transform duration-300">{item}</span>
+        </Link>
+      </li>
+    );
+  })}
+</ul>
+
           </div>
 
           {/* Services */}
@@ -98,12 +102,12 @@ const Footer = () => {
             <div className="space-y-4">
               <a href="mailto:info@dilseweddings.com" className="group flex items-center gap-3 text-gray-300 hover:text-pink-400 transition-all duration-300">
                 <Mail className="w-4 h-4 text-pink-400 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm">info@dilseweddings.com</span>
+                <span className="text-sm">workfordilse@gmail.com</span>
               </a>
               
               <div className="flex items-center gap-3 text-gray-300">
                 <Phone className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">+91-9876543210</span>
+                <span className="text-sm">+91-9304936711</span>
               </div>
               
               <div className="flex items-center gap-3 text-gray-300">

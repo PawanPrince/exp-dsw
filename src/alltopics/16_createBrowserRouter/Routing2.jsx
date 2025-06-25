@@ -27,7 +27,7 @@ let myRoutes = createBrowserRouter([
         children: [
             
             {
-            // path: '/',
+            path: '/',
             index: true, // This will render Home component when the path is exactly '/'
             element: <Home/>
         },

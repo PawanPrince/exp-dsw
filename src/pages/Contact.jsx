@@ -10,6 +10,7 @@ const Contact = () => {
   });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,28 +22,32 @@ const Contact = () => {
     e.preventDefault();
     const { user_name, user_email, message } = formData;
 
-    // ✅ Basic validation
     if (!user_name || !user_email || !message) {
       setError('All fields are required.');
       return;
     }
 
+    setLoading(true);
+
     emailjs
       .sendForm(
-        'your_service_id',     // replace with your actual service ID
-        'your_template_id',    // replace with your actual template ID
+        'service_54vsh5t',
+        'template_7865bgm',
         formRef.current,
-        'your_public_key'      // replace with your EmailJS public key
+        'mI3epPY0XT1CdnS_Y'
       )
       .then(
-        (result) => {
+        () => {
           setSuccess('Message sent successfully!');
           setFormData({ user_name: '', user_email: '', message: '' });
         },
-        (error) => {
+        () => {
           setError('Something went wrong. Please try again.');
         }
-      );
+      )
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -50,8 +55,7 @@ const Contact = () => {
       <h1 className="text-4xl font-bold mb-6 text-[#c1b4a0]">Contact Us</h1>
 
       <p className="text-lg mb-6 max-w-xl text-center text-gray-300">
-        We'd love to hear from you! Whether you have a question about our services, pricing,
-        availability, or anything else, our team is ready to assist you — <span className="italic text-[#c1b4a0]">Dil Se</span>.
+        We'd love to hear from you! Ask anything, we’ll reply — <span className="italic text-[#c1b4a0]">Dil Se</span>.
       </p>
 
       <form ref={formRef} onSubmit={handleSubmit} className="w-full max-w-md space-y-4">
@@ -81,10 +85,12 @@ const Contact = () => {
         />
         <button
           type="submit"
-          className="bg-[#c1b4a0] hover:bg-[#e2d2b9] text-black font-semibold py-2 px-6 rounded-lg transition duration-200 cursor-pointer"
+          disabled={loading}
+          className="w-full bg-[#c1b4a0] hover:bg-[#e2d2b9] text-black font-semibold py-2 px-6 rounded-lg transition duration-200"
         >
-          Send Message
+          {loading ? 'Sending...' : 'Send Message'}
         </button>
+
         {error && <p className="text-red-300 text-sm mt-2">{error}</p>}
         {success && <p className="text-green-300 text-sm mt-2">{success}</p>}
       </form>
