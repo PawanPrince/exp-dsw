@@ -119,10 +119,10 @@ const navigate = useNavigate();
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { id: 1, name: 'Golden Hour for You', price: '₹2,999', features: ['8 Hours Coverage', '300+ Photos', 'Highlight Reel'] },
-              { id: 2, name: 'Platinum Elite', price: '₹4,999', features: ['12 Hours Coverage', '500+ Photos', 'Cinematic Film'] },
-              { id: 3, name: 'Diamond Luxury', price: '₹7,999', features: ['Full Day Coverage', '1000+ Photos', 'Drone Footage'] },
-              { id: 4, name: 'Royal Collection', price: '₹12,999', features: ['Multi-Day Coverage', 'Unlimited Photos', 'Premium Album'] }
+              { id: 1, name: 'Golden Hour for You', price: '₹2,999', features: ['3 Hours Coverage', '100+ Photos', 'Highlight Reel'] },
+              { id: 2, name: 'Platinum Elite', price: '₹4,999', features: ['8 Hours Coverage', '300+ Photos', 'Cinematic Film'] },
+              { id: 3, name: 'Diamond Luxury', price: '₹17,999', features: ['Full Day Coverage', '5000+ Photos', 'Drone Footage'] },
+              { id: 4, name: 'Royal Collection', price: '₹52,999', features: ['Multi-Day Coverage', 'Unlimited Photos', 'Premium Album'] }
             ].map((product) => (
               <div
                 key={product.id}
