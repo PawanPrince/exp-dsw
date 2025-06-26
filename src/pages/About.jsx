@@ -4,17 +4,17 @@ import { Camera, Film, Heart, Award, Users, Star } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#8e887e] via-red-900 to-red-900 text-gray-200">
+    <div className="min-h-screen bg-gradient-to-br from-[rgb(142,136,126)] via-red-900 to-red-900 text-gray-200">
       {/* Hero Image Section */}
-      <div className="relative h-[30vh] overflow-hidden">
+     <div className="relative h-[60vh] overflow-hidden">    {/*   top pic */} 
         <img 
-          src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+          src="/public/aboutPic.jpg" 
           alt="Wedding Photography" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover "
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-6xl font-bold text-white mb-4 tracking-wide">About Dilse Weddings</h1>
+            <h1 className="text-6xl font-bold text-white mb-4 mt-60 tracking-wide">About Dilse Weddings</h1>
             <p className="text-xl text-gray-200 max-w-2xl">Crafting Timeless Love Stories with Passion and Artistry</p>
           </div>
         </div>

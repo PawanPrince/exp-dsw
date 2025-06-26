@@ -135,10 +135,10 @@ const Contact = () => {
       </video>
 
       {/* Optional Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-0"></div>
+      <div className="absolute inset-0 bg-black/10 z-0"></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-2">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
             Contact
             <span className="ml-3 bg-gradient-to-r from-[#c1b4a0] to-red-300 bg-clip-text text-transparent">Us</span>
@@ -178,7 +178,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-[#c1b4a0] to-yellow-900 hover:from-red-400 hover:to-red-900 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+              className="w-full bg-gradient-to-r from-[#c1b4a0] to-red-700 hover:from-green-400 hover:to-green-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
             >
               <div className="flex items-center justify-center space-x-3">
                 {loading ? (
