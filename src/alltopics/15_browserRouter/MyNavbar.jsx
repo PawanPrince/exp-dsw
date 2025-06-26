@@ -1,20 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const MyNavbar = () => {
   const location = useLocation();
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down
+        setShowNav(false);
+      } else {
+        // Scrolling up
+        setShowNav(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   const navLinkClass = (path) =>
     `transition duration-200 px-4 py-2 ${
-      location.pathname === path ? 'text-black font-semibold' : 'text-white '
+      location.pathname === path ? 'text-black font-semibold' : 'text-white'
     } hover:text-black text-bold bg-transparent hover:bg-[#978e8040] rounded-lg`;
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent px-6 py-4 flex justify-between items-center shadow-none">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-in-out ${
+        showNav ? 'translate-y-0' : '-translate-y-full'
+      } bg-transparent px-6 py-4 flex justify-between items-center`}
+    >
       {/* Logo */}
       <div className="cursor-pointer mx-3">
         <Link to="/">
-          <img src="/logoHome.png" alt="Dilse Logo" className="h-15 w-auto object-contain" />
+          <img
+            src="/logoHome.png"
+            alt="Dilse Logo"
+            className="h-14 w-auto object-contain"
+          />
         </Link>
       </div>
 

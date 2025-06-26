@@ -29,7 +29,7 @@ const Footer = () => {
                 <p className="text-xs text-gray-300">With Love & Passion</p>
               </div>
             </Link>
-            
+
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
               <p className="text-sm leading-relaxed text-gray-300">
                 Capturing your love stories with heart and soul. Photography, films, and magical memories made{' '}
@@ -49,22 +49,22 @@ const Footer = () => {
               </div>
               Quick Links
             </h3>
-           <ul className="space-y-3">
-  {['Home', 'About', 'Contact', 'Sign Up', 'Founder'].map((item, index) => {
-    const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`;
-    return (
-      <li key={index}>
-        <Link 
-          to={path}
-          className="group flex items-center gap-3 text-gray-300 hover:text-yellow-200 transition-all duration-300 text-sm"
-        >
-          <div className="w-2 h-2 bg-yellow-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <span className="group-hover:translate-x-1 transition-transform duration-300">{item}</span>
-        </Link>
-      </li>
-    );
-  })}
-</ul>
+            <ul className="space-y-3">
+              {['Home', 'About', 'Contact', 'Sign Up', 'Founder'].map((item, index) => {
+                const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`;
+                return (
+                  <li key={index}>
+                    <Link
+                      to={path}
+                      className="group flex items-center gap-3 text-gray-300 hover:text-yellow-200 transition-all duration-300 text-sm"
+                    >
+                      <div className="w-2 h-2 bg-yellow-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <span className="group-hover:translate-x-1 transition-transform duration-300">{item}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
 
           </div>
 
@@ -78,7 +78,7 @@ const Footer = () => {
             </h3>
             <div className="space-y-3">
               {['Wedding Photography', 'Pre-Wedding Shoots', 'Cinematic Films', 'Creative Direction'].map((service, index) => (
-                <div 
+                <div
                   key={index}
                   className="group bg-white/5 backdrop-blur-sm rounded-xl p-3 border border-white/10 hover:bg-gradient-to-r hover:from-pink-500/20 hover:to-red-500 hover:border-red-400 transition-all duration-300 cursor-pointer"
                 >
@@ -98,18 +98,18 @@ const Footer = () => {
               </div>
               Get in Touch
             </h3>
-            
+
             <div className="space-y-4">
               <a href="mailto:info@dilseweddings.com" className="group flex items-center gap-3 text-gray-300 hover:text-pink-300 transition-all duration-300">
                 <Mail className="w-4 h-4 text-pink-400 group-hover:scale-110 transition-transform duration-300" />
                 <span className="text-sm">workfordilse@gmail.com</span>
               </a>
-              
+
               <div className="flex items-center gap-3 text-gray-300">
                 <Phone className="w-4 h-4 text-purple-400" />
                 <span className="text-sm">+91-9304936711</span>
               </div>
-              
+
               <div className="flex items-center gap-3 text-gray-300">
                 <MapPin className="w-4 h-4 text-amber-400" />
                 <span className="text-sm">India</span>
@@ -156,13 +156,14 @@ const Footer = () => {
             <p className="text-sm text-gray-400">
               © {new Date().getFullYear()} Dilse Weddings. All rights reserved.
             </p>
-            <div className="flex items-center gap-6 text-xs text-gray-400">
-              <a href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors duration-300">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors duration-300">Cookie Policy</a>
+            <div className="flex items-center gap-6 text-xs text-gray-500">
+              <Link to="/privacy" className="hover:text-pink-400 transition-colors duration-300">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-pink-400 transition-colors duration-300">Terms of Service</Link>
+              <Link to="/cookies" className="hover:text-pink-400 transition-colors duration-300">Cookie Policy</Link>
             </div>
+
           </div>
-          
+
           <div className="flex items-center justify-center gap-2 text-xs text-white">
             <span>Made with</span>
             <Heart className="w-3 h-3 text-red-500 fill-current animate-pulse" />

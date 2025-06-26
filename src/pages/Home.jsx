@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [cart, setCart] = useState({});
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const totalItems = Object.values(cart).reduce((sum, count) => sum + count, 0);
 
@@ -69,7 +69,7 @@ const navigate = useNavigate();
             </span>
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mb-8 animate-fade-in opacity-90 leading-relaxed">
-            Capturing love stories with cinematic elegance. Every moment, every emotion, 
+            Capturing love stories with cinematic elegance. Every moment, every emotion,
             preserved forever through our lens.
           </p>
 
@@ -81,12 +81,12 @@ const navigate = useNavigate();
               </span>
             </button> */}
 
-<button
-  onClick={() => navigate('/exploredilse')}
-  className="px-8 py-4 border-2 border-white/30 backdrop-blur-sm hover:bg-white/10 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:border-[#c1b4a0] cursor-pointer"
->
-  Explore Dilse 🧡
-</button>
+            <button
+              onClick={() => navigate('/exploredilse')}
+              className="px-8 py-4 border-2 border-white/30 backdrop-blur-sm hover:bg-white/10 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:border-[#c1b4a0] cursor-pointer"
+            >
+              Explore Dilse 🧡
+            </button>
 
           </div>
         </div>
@@ -129,17 +129,17 @@ const navigate = useNavigate();
                 className="group bg-gradient-to-br from-white/10 to-white/5 hover:from-white/20 hover:to-white/10 border border-white/20 rounded-2xl p-6 shadow-2xl hover:shadow-[#c1b4a0]/10 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2"
               >
                 <div className="relative overflow-hidden rounded-xl mb-6">
-                 <img
-  src={`/cart${product.id}.webp`}
+                  <img
+                    src={`/cart${product.id}.webp`}
 
-  alt={product.name}
-  className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
-/>
+                    alt={product.name}
+                    className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <Heart className="absolute top-4 right-4 h-6 w-6 text-white/70 hover:text-[#c1b4a0] hover:scale-125 transition-all duration-300 cursor-pointer" />
                 </div>
-                  
+
 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -172,11 +172,11 @@ const navigate = useNavigate();
                     </span>
                   </button> */}
                   <button
-  onClick={() => navigate('/contact')}
-  className="w-full bg-[#c1b4a0] text-black font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#c1b4a0]/25 flex items-center justify-center space-x-2 cursor-pointer hover:bg-red-600 hover:text-white"
->
-  <span>Book Now</span>
-</button>
+                    onClick={() => navigate('/contact')}
+                    className="w-full bg-[#c1b4a0] text-black font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#c1b4a0]/25 flex items-center justify-center space-x-2 cursor-pointer hover:bg-red-600 hover:text-white"
+                  >
+                    <span>Book Now</span>
+                  </button>
 
                 </div>
               </div>
@@ -185,7 +185,7 @@ const navigate = useNavigate();
         </div>
       </section>
 
-      
+
 
       {/* About Section */}
       <section id="about" className="w-full py-10 px-6 bg-gradient-to-b from-red-900 to-[#978e80]">
@@ -196,9 +196,9 @@ const navigate = useNavigate();
             </span>
           </h2>
           <p className="text-xl text-gray-300 leading-relaxed mb-12">
-            Founded with a passion for capturing life's most precious moments, Dilse Productions 
-            has been creating timeless memories for couples across the country. Our team of 
-            experienced photographers and cinematographers work tirelessly to ensure every 
+            Founded with a passion for capturing life's most precious moments, Dilse Productions
+            has been creating timeless memories for couples across the country. Our team of
+            experienced photographers and cinematographers work tirelessly to ensure every
             emotion, every smile, and every tear of joy is preserved forever.
           </p>
 
@@ -215,69 +215,72 @@ const navigate = useNavigate();
             ))}
           </div>
         </div>
-           </section>  
+      </section>
 
-{/* Additional Section: Text + Button + Video */}
-<div className="w-full h-[60vh] relative overflow-hidden bg-black">
-  <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
-    <h2 className="text-3xl md:text-4xl font-bold text-[#c1b4a0] mb-4 ">
-      Time is a Beautiful thing.
-    </h2>
-    <button className="px-6 py-3 bg-[#c1b4a0] text-black font-semibold rounded-full hover:scale-105 transition-transform duration-300 cursor-pointer">
-      Explore More Films
-    </button>
-  </div>
+      {/* Additional Section: Text + Button + Video */}
+      <div className="w-full h-[60vh] relative overflow-hidden bg-black">
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#c1b4a0] mb-4 ">
+            Time is a Beautiful thing.
+          </h2>
+          <Link to="/explorefilms">
+            <button className="px-6 py-3 bg-[#c1b4a0] text-black font-semibold rounded-full hover:scale-105 transition-transform duration-300 cursor-pointer">
+              Explore More Films
+            </button>
+          </Link>
 
-   <video
-    src="/home2.mp4"
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="w-full h-full object-cover opacity-60"
-  />
-</div>
+        </div>
 
-{/* Customer Reviews Infinite Scroll */}
-<section className="w-full bg-gradient-to-b from-[#978e80] to-red-900 py-20 overflow-hidden">
-  <h2 className="text-center text-4xl font-bold text-[#c1b4a0] mb-10">
-    𝓦𝓱𝓪𝓽 𝓞𝓾𝓻 𝓒𝓾𝓼𝓽😍𝓶𝓮𝓻𝓼 𝓢𝓪𝔂
-  </h2>
+        <video
+          src="/home2.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover opacity-60"
+        />
+      </div>
 
-  <div className="relative w-full overflow-x-scroll whitespace-nowrap scroll-smooth no-scrollbar px-6">
-    <div className="inline-flex gap-6 animate-marquee">
-      {[
-{ name: 'Pawan Jha', text: 'Their work is absolutely magical and full of heart! Their work is absolutely magical and full of heart! Their work is absolu Their work is absolutely magical and full of heart! Their work is absolu Their work is absolutely magical and full of heart! Their work is absolu Their work is absolutely magical and full of heart! Their work is absolutely magical and full of heart!' },
-{ name: 'Pawan Prince', text: 'The memories they captured are priceless forever! The memories they captured are priceless forever! The memories they captur The memories they captured are priceless forever! The memories they captur The memories they captured are priceless forever! The memories they captur The memories they captured are priceless forever! The memories they captured are priceless forever!' },
-{ name: 'Gagan Chouhan', text: 'Every moment was so beautifully documented by them! Every moment was so beautifully documented by them! Every moment was so Every moment was so beautifully documented by them! Every moment was so Every moment was so beautifully documented by them! Every moment was so Every moment was so beautifully documented by them! Every moment was so beautifully documented by them!' },
-{ name: 'Sahil', text: 'Can’t stop watching our wedding trailer again & again! Can’t stop watching our wedding trailer again & again! Can’t stop wa Can’t stop watching our wedding trailer again & again! Can’t stop wa Can’t stop watching our wedding trailer again & again! Can’t stop wa Can’t stop watching our wedding trailer again & again! Can’t stop watching our wedding trailer again & again!' },
-{ name: 'Amar Verma', text: 'This is the best decision we made for our big day! This is the best decision we made for our big day! This is the best decis This is the best decision we made for our big day! This is the best decis This is the best decision we made for our big day! This is the best decis This is the best decision we made for our big day! This is the best decision we made for our big day!' },
-{ name: 'Amartya Anand', text: 'Highly professional, super friendly and talented team! Highly professional, super friendly and talented team! Highly profe Highly professional, super friendly and talented team! Highly profe Highly professional, super friendly and talented team! Highly profe Highly professional, super friendly and talented team! Highly professional, super friendly and talented team!' },
-{ name: 'Roshan Kumar', text: 'They turned our vision into reality effortlessly! They turned our vision into reality effortlessly! They turned our vision in They turned our vision into reality effortlessly! They turned our vision in They turned our vision into reality effortlessly! They turned our vision in They turned our vision into reality effortlessly! They turned our vision into reality effortlessly!' },
-{ name: 'Prachi Mishra', text: 'Couldn’t have asked for a better wedding team! Couldn’t have asked for a better wedding team! Couldn’t have asked for a be Couldn’t have asked for a better wedding team! Couldn’t have asked for a be Couldn’t have asked for a better wedding team! Couldn’t have asked for a be Couldn’t have asked for a better wedding team! Couldn’t have asked for a better wedding team!' },
-{ name: 'Riya Patel', text: 'Pure emotions, joy and colors captured so perfectly! Pure emotions, joy and colors captured so perfectly! Pure emotions, joy Pure emotions, joy and colors captured so perfectly! Pure emotions, joy Pure emotions, joy and colors captured so perfectly! Pure emotions, joy Pure emotions, joy and colors captured so perfectly! Pure emotions, joy and colors captured so perfectly!' }
+      {/* Customer Reviews Infinite Scroll */}
+      <section className="w-full bg-gradient-to-b from-[#978e80] to-red-900 py-20 overflow-hidden">
+        <h2 className="text-center text-4xl font-bold text-[#c1b4a0] mb-10">
+          𝓦𝓱𝓪𝓽 𝓞𝓾𝓻 𝓒𝓾𝓼𝓽😍𝓶𝓮𝓻𝓼 𝓢𝓪𝔂
+        </h2>
+
+        <div className="relative w-full overflow-x-scroll whitespace-nowrap scroll-smooth no-scrollbar px-6">
+          <div className="inline-flex gap-6 animate-marquee">
+            {[
+              { name: 'Pawan Jha', text: 'Their work is absolutely magical and full of heart! Their work is absolutely magical and full of heart! Their work is absolu Their work is absolutely magical and full of heart! Their work is absolu Their work is absolutely magical and full of heart! Their work is absolu Their work is absolutely magical and full of heart! Their work is absolutely magical and full of heart!' },
+              { name: 'Pawan Prince', text: 'The memories they captured are priceless forever! The memories they captured are priceless forever! The memories they captur The memories they captured are priceless forever! The memories they captur The memories they captured are priceless forever! The memories they captur The memories they captured are priceless forever! The memories they captured are priceless forever!' },
+              { name: 'Gagan Chouhan', text: 'Every moment was so beautifully documented by them! Every moment was so beautifully documented by them! Every moment was so Every moment was so beautifully documented by them! Every moment was so Every moment was so beautifully documented by them! Every moment was so Every moment was so beautifully documented by them! Every moment was so beautifully documented by them!' },
+              { name: 'Sahil', text: 'Can’t stop watching our wedding trailer again & again! Can’t stop watching our wedding trailer again & again! Can’t stop wa Can’t stop watching our wedding trailer again & again! Can’t stop wa Can’t stop watching our wedding trailer again & again! Can’t stop wa Can’t stop watching our wedding trailer again & again! Can’t stop watching our wedding trailer again & again!' },
+              { name: 'Amar Verma', text: 'This is the best decision we made for our big day! This is the best decision we made for our big day! This is the best decis This is the best decision we made for our big day! This is the best decis This is the best decision we made for our big day! This is the best decis This is the best decision we made for our big day! This is the best decision we made for our big day!' },
+              { name: 'Amartya Anand', text: 'Highly professional, super friendly and talented team! Highly professional, super friendly and talented team! Highly profe Highly professional, super friendly and talented team! Highly profe Highly professional, super friendly and talented team! Highly profe Highly professional, super friendly and talented team! Highly professional, super friendly and talented team!' },
+              { name: 'Roshan Kumar', text: 'They turned our vision into reality effortlessly! They turned our vision into reality effortlessly! They turned our vision in They turned our vision into reality effortlessly! They turned our vision in They turned our vision into reality effortlessly! They turned our vision in They turned our vision into reality effortlessly! They turned our vision into reality effortlessly!' },
+              { name: 'Prachi Mishra', text: 'Couldn’t have asked for a better wedding team! Couldn’t have asked for a better wedding team! Couldn’t have asked for a be Couldn’t have asked for a better wedding team! Couldn’t have asked for a be Couldn’t have asked for a better wedding team! Couldn’t have asked for a be Couldn’t have asked for a better wedding team! Couldn’t have asked for a better wedding team!' },
+              { name: 'Riya Patel', text: 'Pure emotions, joy and colors captured so perfectly! Pure emotions, joy and colors captured so perfectly! Pure emotions, joy Pure emotions, joy and colors captured so perfectly! Pure emotions, joy Pure emotions, joy and colors captured so perfectly! Pure emotions, joy Pure emotions, joy and colors captured so perfectly! Pure emotions, joy and colors captured so perfectly!' }
 
 
-].map((review, index) => (
-       <div
-  key={index}
-  className="min-w-[280px] max-w-[280px] flex flex-col justify-start items-center text-center px-4 py-6 bg-[#6f3d37] rounded-xl text-white shadow-lg"
->
-  <h4 className="text-lg font-bold mb-3">{review.name}</h4>
-  <p className="text-sm text-white break-words whitespace-normal">
-    {review.text}
-  </p>
-</div>
+            ].map((review, index) => (
+              <div
+                key={index}
+                className="min-w-[280px] max-w-[280px] flex flex-col justify-start items-center text-center px-4 py-6 bg-[#6f3d37] rounded-xl text-white shadow-lg"
+              >
+                <h4 className="text-lg font-bold mb-3">{review.name}</h4>
+                <p className="text-sm text-white break-words whitespace-normal">
+                  {review.text}
+                </p>
+              </div>
 
-      ))}
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
     </div>
-  </div>
-</section>
 
-
-
-    </div>
-    
   );
 };
 
