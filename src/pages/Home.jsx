@@ -171,6 +171,13 @@ const navigate = useNavigate();
                       Add to Cart {cart[product.id] && `(${cart[product.id]})`}
                     </span>
                   </button> */}
+                  <button
+  onClick={() => navigate('/contact')}
+  className="w-full bg-[#c1b4a0] text-black font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#c1b4a0]/25 flex items-center justify-center space-x-2 cursor-pointer hover:bg-red-600 hover:text-white"
+>
+  <span>Book Now</span>
+</button>
+
                 </div>
               </div>
             ))}

@@ -150,7 +150,7 @@ const Contact = () => {
         </div>
 
         <div className="w-full max-w-lg">
-          <form ref={formRef} onSubmit={handleSubmit} className="space-y-8 bg-white/10 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-8 bg-white/10 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-white/10 hover:bg-white/15 transition-all duration-300">
             <AnimatedInput
               name="user_name"
               value={formData.user_name}
