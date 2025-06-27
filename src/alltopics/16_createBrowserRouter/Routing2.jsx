@@ -21,6 +21,10 @@ const PrivacyPolicy = lazy(() => import('../../pages/PrivacyPolicy'));
 const CookiePolicy = lazy(() => import('../../pages/CookiePolicy'));
 const TermsOfService = lazy(() => import('../../pages/TermsOfService'));
 const ExploreMoreFilms = lazy(() => import('../../pages/ExploreMoreFilms'));
+const BookNow = lazy(() => import('../../pages/BookNow'));
+
+
+
 
 
 
@@ -84,7 +88,11 @@ let myRoutes = createBrowserRouter([
             {
                 path: '/explorefilms',
                 element: <ExploreMoreFilms />,
-            }
+            },
+            {
+                path: '/booknow',
+                element: <BookNow />
+            },
 
 
 

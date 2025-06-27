@@ -18,7 +18,7 @@ const Home = () => {
 
   const reviews = [
     { name: 'Pawan Jha', text: 'Their work is absolutely magical and full of heart! Every moment captured tells a beautiful story that we will cherish forever.' },
-    { name: 'Bobby Mishra', text: 'The memories they captured are priceless forever! Professional service with incredible attention to detail.' },
+    { name: 'Bobby ', text: 'The memories they captured are priceless forever! Professional service with incredible attention to detail.' },
     { name: 'Gagan Chouhan', text: 'Every moment was so beautifully documented by them! The quality and creativity exceeded our expectations completely.' },
     { name: 'Sahil', text: 'Can\'t stop watching our wedding trailer again & again! It perfectly captures the emotions and joy of our special day.' },
     { name: 'Amar Verma', text: 'This is the best decision we made for our big day! Outstanding service and incredible final results.' },
@@ -291,11 +291,14 @@ const Home = () => {
                   </ul>
 
                   <button
-                    onClick={() => navigate('/contact')}
-                    className="w-full bg-[#c1b4a0] text-black font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#c1b4a0]/25 flex items-center justify-center space-x-2 cursor-pointer hover:bg-red-600 hover:text-white"
-                  >
-                    <span>Book Now</span>
-                  </button>
+  onClick={() =>
+    navigate('/booknow', { state: { package: product } })
+  }
+  className="w-full bg-[#c1b4a0] text-black font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#c1b4a0]/25 flex items-center justify-center space-x-2 cursor-pointer hover:bg-red-600 hover:text-white"
+>
+  <span>Book Now</span>
+</button>
+
 
                 </div>
               </div>

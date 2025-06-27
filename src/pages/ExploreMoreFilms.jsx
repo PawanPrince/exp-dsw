@@ -3,25 +3,25 @@ import React from 'react';
 const videos = [
   {
     id: 1,
-    src: '/v1.mp4',
+    src: '/contact.mp4',
     title: 'The Wedding Day',
     description: 'A timeless capture of love and joy.',
   },
   {
     id: 2,
-    src: '/v2.mp4',
+    src: '/exploredilse.mp4',
     title: 'The Engagement Story',
     description: 'An elegant tale of two souls becoming one.',
   },
   {
     id: 3,
-    src: '/v3.mp4',
+    src: '/home2.mp4',
     title: 'Haldi Ceremony',
     description: 'Bright colors and beautiful memories.',
   },
   {
     id: 4,
-    src: '/v4.mp4',
+    src: '/HomeVideo.mp4',
     title: 'Reception Highlights',
     description: 'A grand celebration of love.',
   },

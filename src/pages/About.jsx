@@ -8,7 +8,7 @@ const About = () => {
       {/* Hero Image Section */}
      <div className="relative h-[60vh] overflow-hidden">    {/*   top pic */} 
         <img 
-          src="/public/aboutPic.jpg" 
+          src="/aboutPic.jpg" 
           alt="Wedding Photography" 
           className="w-full h-full object-cover "
         />
