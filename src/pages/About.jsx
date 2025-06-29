@@ -1,22 +1,41 @@
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Camera, Film, Heart, Award, Users, Star } from 'lucide-react';
 
 const About = () => {
+  // Array of images for the introduction section carousel
+  const introImages = [
+    "/about1.jpg",
+    "/about1.0.jpg", 
+    "/about1.01.jpg",
+  ];
+
+  const [introImageIndex, setIntroImageIndex] = useState(0);
+
+  // Auto-scroll effect for introduction carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIntroImageIndex((prevIndex) => 
+        prevIndex === introImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 2000); // Change image every 2 seconds
+
+    return () => clearInterval(interval);
+  }, [introImages.length]);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[rgb(142,136,126)] via-red-900 to-red-900 text-gray-200">
       {/* Hero Image Section */}
-     <div className="relative h-[60vh] overflow-hidden">    {/*   top pic */} 
+      <div className="relative h-[60vh] overflow-hidden">
         <img 
-  src="/aboutPic.jpg" 
-  alt="Wedding Photography" 
-  className="w-full h-full object-cover"
-/>
+          src="/aboutPic.jpg" 
+          alt="Wedding Photography" 
+          className="w-full h-full object-cover"
+        />
 
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-6xl font-bold text-white mb-4 mt-20 tracking-wide">About Dilse Weddings</h1>
-            <p className="text-xl text-gray-200 max-w-2xl">Crafting Timeless Love Stories with Passion and Artistry</p>
+            <h1 className="text-6xl font-bold text-white mb-4 mt-20 tracking-wide animate-fade-in">About Dilse Weddings</h1>
+            <p className="text-xl text-gray-200 max-w-2xl animate-fade-in">Crafting Timeless Love Stories with Passion and Artistry</p>
           </div>
         </div>
       </div>
@@ -49,13 +68,64 @@ const About = () => {
               </p>
             </div>
             
-            <div className="relative">
-              <img 
-                src="/about1.jpg" 
-                alt="Wedding couple" 
-                className="rounded-lg shadow-2xl w-full h-80 object-cover"
-              />
+            <div className="relative h-80 overflow-hidden rounded-lg shadow-2xl">
+              {/* Image Carousel Container */}
+              <div className="relative w-full h-full">
+                {introImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                      index === introImageIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  >
+                    <img 
+                      src={image} 
+                      alt={`Wedding couple ${index + 1}`} 
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                ))}
+              </div>
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg"></div>
+
+              {/* Carousel Indicators */}
+              {/* <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                {introImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setIntroImageIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === introImageIndex 
+                        ? 'bg-white scale-110' 
+                        : 'bg-white/50 hover:bg-white/80'
+                    }`}
+                  />
+                ))}
+              </div> */}
+
+              {/* Navigation Arrows */}
+              {/* <button
+                onClick={() => setIntroImageIndex(
+                  introImageIndex === 0 ? introImages.length - 1 : introImageIndex - 1
+                )}
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-300 backdrop-blur-sm"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button> */}
+
+              {/* <button
+                onClick={() => setIntroImageIndex(
+                  introImageIndex === introImages.length - 1 ? 0 : introImageIndex + 1
+                )}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-300 backdrop-blur-sm"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button> */}
             </div>
           </div>
         </div>
