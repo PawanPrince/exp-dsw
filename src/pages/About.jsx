@@ -8,13 +8,14 @@ const About = () => {
       {/* Hero Image Section */}
      <div className="relative h-[60vh] overflow-hidden">    {/*   top pic */} 
         <img 
-          src="/aboutPic.jpg" 
-          alt="Wedding Photography" 
-          className="w-full h-full object-cover "
-        />
+  src="/aboutPic.jpg" 
+  alt="Wedding Photography" 
+  className="w-full h-full object-cover"
+/>
+
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-6xl font-bold text-white mb-4 mt-60 tracking-wide">About Dilse Weddings</h1>
+            <h1 className="text-6xl font-bold text-white mb-4 mt-20 tracking-wide">About Dilse Weddings</h1>
             <p className="text-xl text-gray-200 max-w-2xl">Crafting Timeless Love Stories with Passion and Artistry</p>
           </div>
         </div>
@@ -50,7 +51,7 @@ const About = () => {
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                src="/about1.jpg" 
                 alt="Wedding couple" 
                 className="rounded-lg shadow-2xl w-full h-80 object-cover"
               />
@@ -157,7 +158,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                src="/about2.jpg" 
                 alt="Wedding team at work" 
                 className="rounded-lg shadow-2xl w-full h-80 object-cover"
               />
